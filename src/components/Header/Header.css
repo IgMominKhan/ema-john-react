@@ -1,0 +1,13 @@
+.main-header {
+  height: 5rem;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #1c2b35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  margin-left: 1.75rem;
+}
