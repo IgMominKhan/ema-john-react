@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Product from "../Product/Product.jsx";
-import Order from "../Order/Oder";
+import Cart from "../Cart/Cart.jsx";
 
 import "./Shop.css";
 
@@ -36,7 +36,7 @@ const Shop = () => {
       </section>
 
       <section className="order-summery">
-        <Order />
+        <Cart />
       </section>
     </main>
   );

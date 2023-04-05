@@ -1,8 +1,8 @@
 import { BsTrash } from "react-icons/bs";
 import { HiArrowRight } from "react-icons/hi";
-import "./Order.css";
+import "./Cart.css";
 
-const Order = () => {
+const Cart = () => {
   return (
     <div>
       <h5>Order Summary</h5>
@@ -26,4 +26,4 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default Cart;
