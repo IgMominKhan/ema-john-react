@@ -20,11 +20,15 @@ const route = createBrowserRouter([{
   children: [
     {
       path: '/',
-      element: <Shop />
+      element: <Shop />,
+      loader: loadProducts
+
     },
     {
       path: 'shop',
-      element: <Shop />
+      element: <Shop />,
+      loader: loadProducts
+
     },
 
     {

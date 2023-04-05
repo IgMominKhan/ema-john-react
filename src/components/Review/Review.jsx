@@ -26,7 +26,7 @@ const Review =()=> {
             </div>
 
             <div className="order-summery">
-                <Cart/>
+                <Cart products={[]}/>
             </div>
         </div>
     )
