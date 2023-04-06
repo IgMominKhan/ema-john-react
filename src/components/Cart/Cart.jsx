@@ -1,10 +1,10 @@
 import { BsTrash } from "react-icons/bs";
 import { HiArrowRight } from "react-icons/hi";
 import "./Cart.css";
+import { useState } from "react";
 
 
-const Cart = ({ products }) => {
-
+const Cart = ({ products, children, handleClearCart }) => {
 
   let totalPrice = 0;
   let shippingCharge = 0;
@@ -30,15 +30,10 @@ const Cart = ({ products }) => {
 
       <h6>Grand Total: ${grandTotal.toFixed(2)}</h6>
 
-      <button className="btn" style={{ backgroundColor: "#FF3030" }}>
+      <button onClick={handleClearCart} className="btn" style={{ backgroundColor: "#FF3030" }}>
         Clear Cart <BsTrash style={{ fontSize: "1.25rem" }} />
       </button>
-      <button
-        className="btn"
-        style={{ backgroundColor: "#FF9900", marginBlock: ".75rem" }}
-      >
-        Review Order <HiArrowRight style={{ fontSize: "1.5rem" }} />
-      </button>
+      {children}
     </div>
   );
 };

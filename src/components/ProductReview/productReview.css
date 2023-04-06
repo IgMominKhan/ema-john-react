@@ -1,6 +1,7 @@
 .review__product {
     display: flex;
     gap: 1.5rem;
+    margin-bottom: 1.25rem;
     border-radius: .5rem;
     border: 1px solid #ccc;
     padding: .5rem;

@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import Product from "../Product/Product.jsx";
 import Cart from "../Cart/Cart.jsx";
-
+import { HiArrowRight } from "react-icons/hi";
 import "./Shop.css";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import { addToDb, getShoppingCart } from '../../../utilities/utilities.js'
 
 const Shop = () => {
@@ -75,7 +75,14 @@ const Shop = () => {
       </section>
 
       <section className="order-summery">
-        <Cart products={savedProducts} />
+        <Cart products={savedProducts} >
+          <button className="btn" style={{ backgroundColor: "#FF9900", marginBlock: ".75rem" }}
+          >
+            <Link to='/order-review'>
+              Review Order <HiArrowRight style={{ fontSize: "1.5rem" }} />
+            </Link>
+          </button>
+        </Cart>
       </section>
     </main>
   );

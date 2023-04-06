@@ -1,12 +1,10 @@
-import { useLoaderData } from "react-router-dom";
-import { getShoppingCart } from "../../../utilities/utilities";
+import { useState, useEffect } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+import { getShoppingCart, removeFromDb, deleteShoppingCart } from "../../../utilities/utilities";
 import ProductReview from '../ProductReview/ProductReview'
 import Cart from "../Cart/Cart";
-
+import { BsTrash } from "react-icons/bs";
 import './Review.css';
-import { useState } from "react";
-import { useEffect } from "react";
-import { removeFromDb } from "../../../utilities/utilities";
 
 const Review = () => {
 
@@ -17,7 +15,7 @@ const Review = () => {
     const cartData = getShoppingCart();
 
     // remove item
-    
+
     const handleRemoveItem = (id) => {
         console.log(id)
         setProductCart((prevState) => prevState.filter((item) => item.id !== id))
@@ -25,6 +23,11 @@ const Review = () => {
     }
 
 
+    // clear cart 
+    const handleClearCart = () => {
+        setProductCart([]);
+        deleteShoppingCart()
+    }
 
     useEffect(() => {
 
@@ -45,7 +48,6 @@ const Review = () => {
 
 
 
-
     return (
         <div className="order-review-container">
             <div className="order-list">
@@ -53,7 +55,11 @@ const Review = () => {
             </div>
 
             <div className="order-summery">
-                <Cart products={productCart} />
+                <Cart products={productCart} handleClearCart={handleClearCart} >
+                    <button className="btn" style={{ backgroundColor: '#FF9900', marginBlock: ".75rem" }}>
+                        <Link to='/process-order'>Proceed Order <BsTrash /></Link>
+                    </button>
+                </Cart>
             </div>
         </div>
     )

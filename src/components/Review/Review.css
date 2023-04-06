@@ -7,7 +7,6 @@
     padding:4rem;
 }
 
-
 @media screen and (min-width:48rem){
     .order-review-container {
         grid-gap: 6rem;
