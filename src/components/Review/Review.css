@@ -1,5 +1,19 @@
 .order-review-container {
     width:80%;
     margin-inline:auto;
-    
+    display:grid;
+    grid-gap:2rem;
+    grid-template-columns: 2fr 1fr;
+    padding:4rem;
+}
+
+.order-list {
+    display:grid;
+    gap:1.25rem;
+}
+
+@media screen and (min-width:48rem){
+    .order-review-container {
+        grid-gap: 6rem;
+    }
 }

@@ -1,0 +1,46 @@
+.review__product {
+    display: flex;
+    gap: 1.5rem;
+    border-radius: .5rem;
+    border: 1px solid #ccc;
+    padding: .5rem;
+}
+
+.review__product img {
+    max-width: 5rem;
+    height: 5rem;
+    border-radius: .5rem;
+}
+
+.review__product .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review__product .info h6 {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+.review__product .info p {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.review__product .delete {
+    font-size: 1.75rem;margin: auto;
+    margin-right: 0;
+    width:4rem;
+    height:4rem;
+    color:red;
+    background-color: hsla(0, 100%, 50%,.25);
+    padding:.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
