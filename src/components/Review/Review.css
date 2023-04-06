@@ -7,10 +7,6 @@
     padding:4rem;
 }
 
-.order-list {
-    display:grid;
-    gap:1.25rem;
-}
 
 @media screen and (min-width:48rem){
     .order-review-container {
